@@ -1,14 +1,21 @@
 import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
 import joblib
+import os
 
-#music_data = pd.read_csv('./music.csv')
-#x = music_data.drop(columns=['genre'])
-#y = music_data['genre']     
+# Kommentierung entfernen für Modellerstellung
+print("Aktuelles Arbeitsverzeichnis:", os.getcwd())
+music_data = pd.read_csv('C:/Users/TAASCJUN/OneDrive - Swisscom/Relevant/Coding/PythonMusicSuggestionML/music.csv')
+x = music_data.drop(columns=['genre'])
+y = music_data['genre']
 
-#model = DecisionTreeClassifier()
-#model.fit(x,y)
+model = DecisionTreeClassifier()
+model.fit(x,y)
 
+# Modell speichern
+joblib.dump(model, 'music-recommender.joblib')
+
+# Dann erst laden und vorhersagen
 model = joblib.load('music-recommender.joblib')
 
 # Erstelle ein DataFrame mit den korrekten Spaltennamen
