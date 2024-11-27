@@ -32,3 +32,4 @@ Das Programm lernt aus meinen Testdaten, welche Musik sie mögen. Dann kann es f
   - Entscheidungsregeln (z.B. "age <= 30.5")
   - Wahrscheinlichkeiten für jedes Genre
   - Verzweigungen basierend auf Alter und Geschlecht
+![image](https://github.com/user-attachments/assets/a53c8c20-e86e-4629-a866-3e7e9594d58e)
